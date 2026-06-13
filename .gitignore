@@ -1,0 +1,24 @@
+# Uploads folder - contains user uploaded files
+/uploads/
+
+# Environment variables - contains sensitive configuration
+.env
+
+# IDE and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+error_log
+access_log
+
+# Temporary files
+*.tmp
+*.bak
+*.cache

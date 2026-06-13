@@ -1,0 +1,182 @@
+/**
+ * Custom CSS - Real Estate Receivable System
+ * Beige, Maroon, and Mulled Wine Theme
+ */
+
+/* ============================================
+   CSS Variables
+   ============================================ */
+:root {
+    --primary-maroon: #800000;
+    --dark-maroon: #5c0000;
+    --light-maroon: #a32929;
+    --mulled-wine: #4B4359;
+    --dark-wine: #352f40;
+    --light-wine: #625970;
+    --beige: #F5F5DD;
+    --white: #ffffff;
+}
+
+/* ============================================
+   Smooth Animations
+   ============================================ */
+* {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+.text-maroon {
+    color: var(--primary-maroon) !important;
+}
+
+.bg-maroon {
+    background-color: var(--primary-maroon) !important;
+}
+
+.border-maroon {
+    border-color: var(--primary-maroon) !important;
+}
+
+/* ============================================
+   Loading Spinner
+   ============================================ */
+.spinner-maroon {
+    color: var(--primary-maroon);
+}
+
+/* ============================================
+   Pagination
+   ============================================ */
+.pagination .page-link {
+    color: var(--primary-maroon);
+    border-color: #dee2e6;
+}
+
+.pagination .page-link:hover {
+    background-color: var(--light-maroon);
+    color: var(--white);
+    border-color: var(--primary-maroon);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-maroon);
+    border-color: var(--primary-maroon);
+}
+
+/* ============================================
+   Dropdown Menu
+   ============================================ */
+.dropdown-menu {
+    border-color: var(--primary-maroon);
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-maroon);
+    color: var(--white);
+}
+
+/* ============================================
+   Modal
+   ============================================ */
+.modal-header {
+    background: linear-gradient(135deg, var(--primary-maroon) 0%, var(--dark-maroon) 100%);
+    color: var(--white);
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+/* ============================================
+   Breadcrumb
+   ============================================ */
+.breadcrumb {
+    background-color: var(--white);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.breadcrumb-item.active {
+    color: var(--primary-maroon);
+}
+
+.breadcrumb-item a {
+    color: var(--mulled-wine);
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--primary-maroon);
+}
+
+/* ============================================
+   Data Tables Enhancement
+   ============================================ */
+.table-hover tbody tr:hover {
+    background-color: rgba(128, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+/* ============================================
+   Progress Bar
+   ============================================ */
+.progress-bar {
+    background-color: var(--primary-maroon);
+}
+
+/* ============================================
+   Scrollbar Styling (Webkit browsers)
+   ============================================ */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--beige);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #800000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5c0000;
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+    .main-nav,
+    .main-footer,
+    .btn,
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background-color: white !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+}
+
+/* ============================================
+   Responsive Utilities
+   ============================================ */
+@media (max-width: 768px) {
+    .stats-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .main-content {
+        padding: 20px 0;
+    }
+}

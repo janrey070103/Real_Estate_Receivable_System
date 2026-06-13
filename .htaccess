@@ -1,0 +1,39 @@
+# Real Estate Receivable System - Apache Configuration
+# Session and Security Settings
+
+# Enable PHP error reporting (disable in production)
+# php_flag display_errors off
+# php_flag log_errors on
+
+# Session Configuration - Prevent Early Timeout
+# Session lifetime: 8 hours (28800 seconds)
+php_value session.gc_maxlifetime 28800
+php_value session.cookie_lifetime 28800
+
+# Session garbage collection settings
+php_value session.gc_probability 1
+php_value session.gc_divisor 100
+
+# Security settings
+php_flag session.use_only_cookies on
+php_flag session.cookie_httponly on
+php_value session.cookie_samesite "Lax"
+
+# File upload limits (adjust as needed)
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+
+# Memory limit (adjust as needed)
+php_value memory_limit 128M
+
+# Prevent directory listing
+Options -Indexes
+
+# Custom error pages (optional - create these files if needed)
+# ErrorDocument 404 /404.php
+# ErrorDocument 500 /500.php
+
+# Force HTTPS (uncomment if using SSL)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
